@@ -1,0 +1,8 @@
+<div *ngIf="products?.length; else NoProducts">
+  <a *ngFor="let product of products" [routerLink]="['/product/', product.id]">
+    <app-category-product-card [product]="product"></app-category-product-card>
+  </a>
+</div>
+<ng-template #NoProducts
+  ><p>No products available for this category</p></ng-template
+>

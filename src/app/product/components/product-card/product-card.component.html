@@ -1,0 +1,24 @@
+<div>
+  <a [routerLink]="[product.id]">
+    <img [src]="product.image" alt="{{ product.nameEn }}" />
+    <p>{{ product.nameEn }}</p>
+    <p>{{ product.nameAr }}</p>
+    <p>{{ product.price }}</p>
+  </a>
+  <form [formGroup]="productForm">
+    <input
+      *ngIf="!isInCart"
+      name="orderedQuantity"
+      type="number"
+      placeholder="orderedQuantity"
+      formControlName="orderedQuantity"
+      min="1"
+      required
+    />
+    <button (click)="addToCart()">
+      {{ isInCart ? "Remove from Cart" : "Add to Cart" }}
+    </button>
+  </form>
+  <br />
+  <button (click)="deleteProduct()">Delete</button>
+</div>

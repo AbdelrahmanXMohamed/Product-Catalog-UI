@@ -1,0 +1,37 @@
+<div>
+  <form [formGroup]="registerForm">
+    <!-- <app-tostar message="hellow"></app-tostar> -->
+    <input
+      type="email"
+      placeholder="Email"
+      formControlName="email"
+      name="email"
+      required
+    />
+    <input
+      type="text"
+      placeholder="Username"
+      formControlName="username"
+      requird
+    />
+    <input
+      type="password"
+      placeholder="Password"
+      formControlName="password"
+      name="password"
+      required
+    />
+    <input
+      type="password"
+      placeholder="Confirm Password"
+      formControlName="rePassword"
+      name="rePassword"
+      required
+    />
+
+    <button (click)="register()">Register</button>
+    <br />
+    <p>Already have account ?</p>
+    <a routerLink="/login">Login</a>
+  </form>
+</div>

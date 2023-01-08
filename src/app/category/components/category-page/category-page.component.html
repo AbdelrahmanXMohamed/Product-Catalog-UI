@@ -1,0 +1,5 @@
+<p>category-page works!</p>
+<a routerLink="/category/create">create category</a>
+<div *ngFor="let category of categories">
+  <app-category-card [category]="category"></app-category-card>
+</div>

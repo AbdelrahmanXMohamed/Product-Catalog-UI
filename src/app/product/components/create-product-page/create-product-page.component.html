@@ -1,0 +1,58 @@
+<div>
+  <form (ngSubmit)="createProduct()" [formGroup]="productForm" novalidate>
+    <!-- <app-tostar message="hellow"></app-tostar> -->
+    <input
+      type="text"
+      placeholder="nameAr"
+      formControlName="nameAr"
+      name="nameAr"
+      required
+    />
+    <input
+      type="text"
+      placeholder="nameEn"
+      formControlName="nameEn"
+      name="nameEn"
+      required
+    />
+    <input
+      type="number"
+      placeholder="price"
+      formControlName="price"
+      name="price"
+      required
+    />
+
+    <input
+      type="number"
+      placeholder="quantity"
+      formControlName="quantity"
+      name="quantity"
+      required
+    />
+    <input
+      type="number"
+      placeholder="ordered Limit"
+      formControlName="orderedLimit"
+      name="orderedLimit"
+      required
+    />
+
+    <select formControlName="categoryId">
+      <option [ngValue]="null" disabled>Select category</option>
+      <option *ngFor="let category of categories" value="{{ category.id }}">
+        {{ category.name }}
+      </option>
+    </select>
+    <input
+      type="file"
+      formControlName="image"
+      (change)="uploadFile($event)"
+      name="image"
+      accept="image/png, image/jpeg"
+      required
+    />
+
+    <button type="submit">Create new product</button>
+  </form>
+</div>

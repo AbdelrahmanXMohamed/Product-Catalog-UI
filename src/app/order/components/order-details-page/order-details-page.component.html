@@ -1,0 +1,14 @@
+<p>Order id: {{order.orderId}}</p>
+<p>Customer mail: {{order.customerMail}}</p>
+<p>Customer name: {{order.customerName}}</p>
+<div>
+    <h3>Ordered products</h3>
+<div *ngFor="let product of order.products">
+    <img [src]="product.image" alt={{product.nameEn}}>
+    <p>Product name (English): {{product.nameEn}}</p>
+    <p>Product name (Arabic): {{product.nameAr}}</p>
+    <p>Price: {{product.price}}</p>
+    <p>Ordered quantity: {{product.orderedQuantity}}</p>
+</div>
+<p>Total order price: {{order.totalPrice}}</p>
+</div>

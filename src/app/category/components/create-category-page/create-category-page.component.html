@@ -1,0 +1,18 @@
+<!-- <p>create-category-page works!</p> -->
+<div>
+  <form>
+    <app-tostar
+      *ngIf="message.length"
+      [message]="message"
+      [color]="color"
+    ></app-tostar>
+    <input
+      type="text"
+      name="category"
+      placeholder="Category name"
+      [(ngModel)]="category"
+      required
+    />
+    <button (click)="createCategory()">Create Category</button>
+  </form>
+</div>

@@ -1,0 +1,15 @@
+<img [src]="product.image" alt="{{ product.nameEn }}" />
+<p>ID: {{ product.id }}</p>
+<p>Name En: {{ product.nameEn }}</p>
+<p>Name Ar: {{ product.nameAr }}</p>
+<p>Price: {{ product.price }}</p>
+<p>Ordered Quantity: {{ product.orderedQuantity }}</p>
+<p>Ordered Limit: {{ product.orderedLimit }}</p>
+<p>Quantity: {{ product.quantity }}</p>
+<p>
+  Category:
+  <a [routerLink]="['/category', product.category.id]">{{
+    product.category.name
+  }}</a>
+</p>
+<a [routerLink]="['/product/edit', product.id]">edit</a>

@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+  --global-color:#e9600d;
+  --global-hover-color:#e9600df5;
+
+}
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* outline: lime solid 1px; */
+}
+a{
+
+  text-decoration: none;
+}

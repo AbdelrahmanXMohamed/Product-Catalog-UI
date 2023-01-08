@@ -1,0 +1,45 @@
+div {
+  background-color: #e9600d;
+  height: 91vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 60px;
+  box-shadow: 15px 10px 5px #0000002f;
+  background-color: white;
+}
+
+input,
+select {
+  display: block;
+  margin-bottom: 10px;
+  width: 275px;
+  padding: 10px 20px;
+  text-transform: capitalize;
+}
+button {
+  all: unset;
+  width: 160px;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  background-color: var(--global-color);
+  text-align: center;
+  font-family: cursive;
+  transition: 0.5s;
+  color: #fff;
+}
+button:hover {
+  background-color: var(--global-hover-color);
+  transition: 0.5s;
+  box-shadow: 5px 5px 5px #0000002f;
+}
+
+option {
+  text-transform: capitalize;
+}

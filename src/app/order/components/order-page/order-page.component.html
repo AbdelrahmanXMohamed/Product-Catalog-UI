@@ -1,0 +1,30 @@
+<p>order-page works!</p>
+<h3>Current Order</h3>
+<app-tostar *ngIf="message.length" [color]="'red'" [message]="message"></app-tostar>
+<div *ngIf="orders && orders.length; else noCart">
+<div class="current-container">
+    <div class="product-card" *ngFor="let product of orders">
+        <img [src]="product.image" alt={{product.nameEn}}>
+        <p>Name En: {{product.nameEn}}</p>
+        <p>Name Ar: {{product.nameAr}}</p>
+        <p>Ordered Quantity: {{product.orderedQuantity}}</p>
+        <p>Price: {{product.price}}</p>
+    </div>
+</div>
+<p>Total price : {{totalPrice}}</p>
+<button (click)="createOrder()">Order</button>
+</div>
+
+<ng-template #noCart><p>Nothing in cart </p></ng-template>
+<h3>Previous Orders</h3>
+
+<div class="container" *ngIf="previousOrders && previousOrders.length; else elseBlock">
+    <div *ngFor="let order of previousOrders">
+        <a [routerLink]="[order.orderId]">
+        <h4>Order ID: {{order.orderId}}</h4>
+        <p>Total price : {{order.totalPrice | currency }}</p>
+        </a>
+    </div>
+
+</div>
+<ng-template #elseBlock><p>Nothing in History </p></ng-template>

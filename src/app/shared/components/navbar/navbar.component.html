@@ -1,0 +1,17 @@
+<nav>
+  <div class="nav-left">
+    <a routerLink="/"
+      ><img src="../../../assets/Logo.png" class="logo" alt="logo"
+    /></a>
+    <a routerLink="/order">Order</a>
+    <a routerLink="/product">Product</a>
+    <a routerLink="/category">Category</a>
+  </div>
+
+  <div class="nav-right">
+    <span *ngIf="isLoggedIn; else login" class="logout" (click)="(logout)"
+      >logout</span
+    >
+    <ng-template #login> <a routerLink="/login">Login</a></ng-template>
+  </div>
+</nav>

@@ -1,0 +1,24 @@
+nav {
+  /* padding: 14px 0px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  background-color: #e1e1e1;
+}
+img {
+  width: 50px;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  justify-content: space-between;
+}
+a,
+.logout {
+  /* color: #e1e1e1; */
+  color: var(--global-color);
+  font-family: cursive;
+  text-transform: capitalize;
+}
